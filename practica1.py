@@ -53,7 +53,7 @@ class acortaApp(webapp.webApp):
                             formulario + "</body></html>")
             else:
                 recurso = int(recurso.split('/')[1])
-                if recurso[1:] in self.urlCorta:
+                if recurso in self.urlCorta:
                     httpCode = ("300 Redirect\nLocation: " +
                                 self.urlCorta[recurso])
                     htmlBody = "<html><body>Redireccion</body></html>"
